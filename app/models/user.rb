@@ -9,4 +9,5 @@ class User < ApplicationRecord
             length: { maximum: 105 },
             uniqueness: { case_sensitive: false },
             format: { with: VAILD_EMAIL_REGEX}
+  has_secure_password
 end
