@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   #this sets it up so articles has paths to all the cliche CRUD things
   resources :articles
-
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
